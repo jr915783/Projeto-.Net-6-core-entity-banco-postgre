@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "LNtnI6+/x7IlhydA+kFalV1ytTNzOYq1rwDO0BFwrzI=",
+  "Source": "OverDrive.WebApi",
+  "BasePath": "_content/OverDrive.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
