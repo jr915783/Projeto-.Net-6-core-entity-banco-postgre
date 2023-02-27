@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{FA2A61BB-E6C4-4BA7-BB15-B977BD5EB968}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverDrive.WebApi", "OverDrive.WebApi\OverDrive.WebApi.csproj", "{6F198D0E-A902-4323-AE58-889CBC68B073}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inlog.WebApi", "OverDrive.WebApi\Inlog.WebApi.csproj", "{6F198D0E-A902-4323-AE58-889CBC68B073}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{5F4DB9A5-DF09-45B2-A9F7-8D4EECCA0B76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{5F4DB9A5-DF09-45B2-A9F7-8D4EECCA0B76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

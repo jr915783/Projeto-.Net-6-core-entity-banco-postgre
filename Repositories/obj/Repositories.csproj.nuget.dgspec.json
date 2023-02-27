@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\source\\repos\\Overdrive\\Repositories\\Repositories.csproj": {}
+    "C:\\Users\\Dell\\source\\repos\\back-teste\\Repositories\\Repositories.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\source\\repos\\Overdrive\\Data\\Data.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\back-teste\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Overdrive\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\back-teste\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\Dell\\source\\repos\\Overdrive\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\back-teste\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\source\\repos\\Overdrive\\Data\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\back-teste\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Dell\\source\\repos\\Overdrive\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Dell\\source\\repos\\Overdrive\\Domain\\Domain.csproj"
+              "C:\\Users\\Dell\\source\\repos\\back-teste\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Dell\\source\\repos\\back-teste\\Domain\\Domain.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\Dell\\source\\repos\\Overdrive\\Domain\\Domain.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\back-teste\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Overdrive\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\back-teste\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Dell\\source\\repos\\Overdrive\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\back-teste\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\source\\repos\\Overdrive\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\back-teste\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -140,14 +140,14 @@
         }
       }
     },
-    "C:\\Users\\Dell\\source\\repos\\Overdrive\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\back-teste\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Overdrive\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\back-teste\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\Dell\\source\\repos\\Overdrive\\Repositories\\Repositories.csproj",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\back-teste\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\source\\repos\\Overdrive\\Repositories\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\back-teste\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -164,8 +164,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Dell\\source\\repos\\Overdrive\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\Dell\\source\\repos\\Overdrive\\Data\\Data.csproj"
+              "C:\\Users\\Dell\\source\\repos\\back-teste\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\Dell\\source\\repos\\back-teste\\Data\\Data.csproj"
               }
             }
           }

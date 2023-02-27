@@ -41,7 +41,7 @@ namespace Repositories.Base
             await _dataContex.SaveChangesAsync();
         }
 
-        public async Task Update(int Id, T entity)
+        public async Task Update(T entity)
         {
             _dataContex.Set<T>().Update(entity);
             await _dataContex.SaveChangesAsync();

@@ -6,7 +6,7 @@ using Repositories.Interface;
 
 namespace Repositories.Repository
 {
-    public class CadastroRepository : BaseRepositorio<EntityCadastros>, ICadastro
+    public class CadastroRepository : BaseRepositorio<EntityCadastrosVeiculo>, ICadastro
     {
         public readonly DataContext _cadastro;
         public CadastroRepository(DataContext dataContex) : base(dataContex)
@@ -15,25 +15,24 @@ namespace Repositories.Repository
            
         }
 
-        public async Task<int> ValidacaoCadastro(EntityCadastros cadastro)
+        public async Task<int> ValidacaoCadastro(EntityCadastrosVeiculo cadastro)
         {
-           var validacaoCadastro = await _cadastro.Set<EntityCadastros>().Where(x => x.Documento == cadastro.Documento && x.Telefone == cadastro.Telefone).ToListAsync();
+           var validacaoCadastro = await _cadastro.Set<EntityCadastrosVeiculo>().Where(x => x.Chassi == cadastro.Chassi).ToListAsync();
             return (validacaoCadastro.Count); 
         }
 
-        public  Task<EntityCadastros> GetByName(string name){
+        public  Task<EntityCadastrosVeiculo> GetByChassi(string chassi){
            
             try
             {
-                return _cadastro.Set<EntityCadastros>().OrderBy(n => n.Nome).Where(x => x.Documento.ToLower().Contains(name.ToLower()))
-                 .Select(x => new EntityCadastros
+                return _cadastro.Set<EntityCadastrosVeiculo>().OrderBy(n => n.Chassi).Where(x => x.Chassi.ToLower().Contains(chassi.ToLower()))
+                 .Select(x => new EntityCadastrosVeiculo
                  {
-                     Documento = x.Documento,
-                     Telefone = x.Telefone,
-                     Nome = x.Nome,
-                     Id = x.Id,
-                     Status = x.Status,
-                     Usuario = x.Usuario
+                     Chassi = x.Chassi,
+                     Tipo = x.Tipo,
+                     NumeroPassageiros = x.NumeroPassageiros,
+                     Cor = x.Cor
+
                  }).FirstOrDefaultAsync();
             }
             catch (Exception ex)

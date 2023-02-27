@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Data.DataConfig
 {
-    public class Configurations : IEntityTypeConfiguration<EntityCadastros>
+    public class Configurations : IEntityTypeConfiguration<EntityCadastrosVeiculo>
     {
-        public void Configure(EntityTypeBuilder<EntityCadastros> builder)
+        public void Configure(EntityTypeBuilder<EntityCadastrosVeiculo> builder)
         {
-            builder.ToTable("Cadastros");
+            builder.ToTable("CadastrosVeiculos");
             builder.HasKey(k => k.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
         }

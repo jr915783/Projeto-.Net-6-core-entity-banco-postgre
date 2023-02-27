@@ -15,9 +15,7 @@ namespace Data.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<EntityCadastros>(new Configurations().Configure);
-            //builder.Entity<Status>();
-            builder.Entity<HistoricoCadastro>();
+            builder.Entity<EntityCadastrosVeiculo>(new Configurations().Configure);            
             base.OnModelCreating(builder);
         }
      

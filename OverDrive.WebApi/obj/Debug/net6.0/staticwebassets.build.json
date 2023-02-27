@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "LNtnI6+/x7IlhydA+kFalV1ytTNzOYq1rwDO0BFwrzI=",
-  "Source": "OverDrive.WebApi",
-  "BasePath": "_content/OverDrive.WebApi",
+  "Hash": "Cnl8ZygWi5pKWhevQD/2gvaDIeoynBgeaNJEdHoayj0=",
+  "Source": "Inlog.WebApi",
+  "BasePath": "_content/Inlog.WebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

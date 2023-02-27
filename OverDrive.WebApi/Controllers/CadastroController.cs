@@ -9,17 +9,15 @@ namespace OverDrive.WebApi.Controllers
     [ApiController]
     public class CadastroController : ControllerBase
     {
-        private readonly ICadastro _cadastro;
-        private readonly IHistoricoCadastro _historicoCadastro;
+        private readonly ICadastro _cadastro;        
 
-        public CadastroController(ICadastro cadastro, IHistoricoCadastro historicoCadastro, DataContext dataContex)
+        public CadastroController(ICadastro cadastro, DataContext dataContex)
         {
-            _cadastro = cadastro;
-            _historicoCadastro = historicoCadastro;
+            _cadastro = cadastro;           
         }
 
         [HttpPost("Cadastrar")]
-        public async Task<IActionResult> Cadastrar(EntityCadastros cadastro)
+        public async Task<IActionResult> Cadastrar(EntityCadastrosVeiculo cadastro)
         {
             try
             {
@@ -32,9 +30,9 @@ namespace OverDrive.WebApi.Controllers
                 if (result == 0)
                 {
                     await _cadastro.Insert(cadastro);
-                    return Ok("Cadastro realizado com sucesso!");
+                    return Ok("Veiculo cadastro realizado com sucesso!");
                 }
-                else { return BadRequest("Documento e telefone já cadastrado por outra pessoa!"); }               
+                else { return BadRequest("Número de chassi já cadastrado!"); }               
             }
             catch (Exception ex)
             {
@@ -61,15 +59,15 @@ namespace OverDrive.WebApi.Controllers
             return Ok(result);
         }
 
-        [HttpGet("ObterCadastroPorNome/{nome}")]
-        public async Task<IActionResult> ObterCadastroPorNome(string nome)
+        [HttpGet("ObterCadastroPorChassi/{chassi}")]
+        public async Task<IActionResult> ObterCadastroPorChassi(string chassi)
         {          
             try
             {
-                var result = await _cadastro.GetByName(nome);
+                var result = await _cadastro.GetByChassi(chassi);
                 if (result == null)
                 {
-                    return NotFound($"Cadastro com nome {nome}, não encontrado!");
+                    return NotFound($"Cadastro com chassi {chassi}, não encontrado!");
                 }
                 return Ok(result);
             }
@@ -89,48 +87,31 @@ namespace OverDrive.WebApi.Controllers
                 return NotFound($"id {id}, não encontrado!");
             }
             await _cadastro.Delete(id);
-            return Ok($"O Cadastro de {result.Nome}, foi deletado com sucesso!");
+            return Ok($"O Veículo de Chassi {result.Chassi}, foi deletado com sucesso!");
         }
 
-        [HttpPut("AtualizarCadastro/{id}")]
-        public async Task<IActionResult> AtualizarCadastro(int id, EntityCadastros cadastro)
+        [HttpPut("AtualizarCadastro")]
+        public async Task<IActionResult> AtualizarCadastro(EntityCadastrosVeiculo cadastro)
         {
-            
-            if (id != cadastro.Id)
-            {
-                return BadRequest($"Cadastro com id {id} não encontrado!");
-            }
-            try
-            {
-                await _cadastro.Update(id, cadastro);
+           // var result = await _cadastro.ValidacaoCadastro(cadastro);
 
-                await _historicoCadastro.Insert(new HistoricoCadastro
+            if(cadastro != null)
+            {
+                try
                 {
-                    Id = cadastro.Id,
-                    Status = cadastro.Status,
-                    Data = DateTime.Now.ToString(),
-                    Usuario= cadastro.Usuario,
-                });              
+                    await _cadastro.Update(cadastro);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
 
+                return Ok($"Cadastro atualizado com sucesso!");
 
             }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            
-            return Ok($"Cadastro atualizado com sucesso!");
+            else { return BadRequest("Objeto não encontrado!"); }            
+
         }
-
-        [HttpGet("ObterHistoricoPorId/{id}")]
-        public async Task<IActionResult> ObterHistoricoPorId(int id)
-        {
-            var result = await _historicoCadastro.GetById(id);
-            if (result == null)
-            {
-                return NotFound($"Histórico com id {id}, não encontrado!");
-            }
-            return Ok(result);
-        }
+       
     }
 }
